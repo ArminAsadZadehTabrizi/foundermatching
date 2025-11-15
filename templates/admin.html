@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Founder Matching Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .admin-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6366f1;
+            margin: 0.5rem 0;
+        }
+        
+        .stat-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .chart-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .category-bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        
+        .category-label {
+            width: 120px;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        
+        .category-bar-fill {
+            flex: 1;
+            height: 24px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-bar-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.5rem;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .data-table th {
+            background: #f9fafb;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .data-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .data-table tr:hover {
+            background: #f9fafb;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge-technical { background: #dbeafe; color: #1e40af; }
+        .badge-marketing { background: #fce7f3; color: #be185d; }
+        .badge-fundraising { background: #fef3c7; color: #92400e; }
+        .badge-product { background: #d1fae5; color: #065f46; }
+        .badge-ux { background: #e0e7ff; color: #3730a3; }
+        .badge-strategy { background: #f3e8ff; color: #6b21a8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Admin Header -->
+        <div class="admin-header">
+            <div style="display: flex; justify-content: space-between; align-items: start;">
+                <div>
+                    <h1 style="margin: 0 0 0.5rem 0;">🎛️ Admin Dashboard</h1>
+                    <p style="margin: 0; opacity: 0.9;">Community Insights & Match Management</p>
+                </div>
+                <a href="/admin/logout" style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.875rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                    🚪 Logout
+                </a>
+            </div>
+            <a href="/" style="color: white; opacity: 0.8; font-size: 0.875rem; margin-top: 1rem; display: inline-block;">
+                ← Back to Main App
+            </a>
+        </div>
+
+        <!-- Key Statistics -->
+        <div class="stats-grid" id="statsGrid">
+            <div class="stat-card">
+                <div class="stat-label">Total Users</div>
+                <div class="stat-value" id="statUsers">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Needs</div>
+                <div class="stat-value" id="statNeeds">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Learnings</div>
+                <div class="stat-value" id="statLearnings">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Matches</div>
+                <div class="stat-value" id="statMatches">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Pending Matches</div>
+                <div class="stat-value" id="statPendingMatches">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Confirmed Chats</div>
+                <div class="stat-value" id="statConfirmedChats">-</div>
+            </div>
+        </div>
+
+        <!-- Category Breakdown -->
+        <div class="chart-card">
+            <h2>📊 Needs by Category</h2>
+            <div id="needsChart"></div>
+        </div>
+
+        <div class="chart-card">
+            <h2>💡 Learnings by Category</h2>
+            <div id="learningsChart"></div>
+        </div>
+
+        <!-- All Needs -->
+        <div class="chart-card">
+            <h2>🎯 All Community Needs</h2>
+            <table class="data-table" id="needsTable">
+                <thead>
+                    <tr>
+                        <th>Founder</th>
+                        <th>Need</th>
+                        <th>Category</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="4" style="text-align: center; color: #6b7280;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- All Learnings -->
+        <div class="chart-card">
+            <h2>💡 All Community Learnings</h2>
+            <table class="data-table" id="learningsTable">
+                <thead>
+                    <tr>
+                        <th>Founder</th>
+                        <th>Learning</th>
+                        <th>Category</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="4" style="text-align: center; color: #6b7280;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- All Matches -->
+        <div class="chart-card">
+            <h2>🤝 All Match Suggestions</h2>
+            <table class="data-table" id="matchesTable">
+                <thead>
+                    <tr>
+                        <th>Requester</th>
+                        <th>Expert</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5" style="text-align: center; color: #6b7280;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Coffee Chats -->
+        <div class="chart-card">
+            <h2>☕ Coffee Chats Schedule</h2>
+            <table class="data-table" id="chatsTable">
+                <thead>
+                    <tr>
+                        <th>Requester</th>
+                        <th>Expert</th>
+                        <th>Status</th>
+                        <th>Scheduled Time</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="5" style="text-align: center; color: #6b7280;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Admin Dashboard | Founder Matching Platform</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/admin.js"></script>
+</body>
+</html>
+
+
+

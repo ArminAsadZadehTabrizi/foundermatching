@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Environment
+.env
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Models & Cache
+.cache/
+models/
+*.pkl
+*.h5
+*.pb
+
+# Logs
+*.log
+logs/
+
+
+
+
+
+
+
+
+
+
+
+
+.vercel

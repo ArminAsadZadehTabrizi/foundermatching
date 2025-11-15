@@ -1,0 +1,747 @@
+{
+  "users": [
+    {
+      "id": "u001",
+      "name": "Nik Kuchler",
+      "email": "nik@startup.com",
+      "company": "AI Startup",
+      "role": "founder",
+      "skills": [
+        {
+          "label": "Test skill 1",
+          "category": "technical"
+        },
+        {
+          "label": "Test skill 2",
+          "category": "product"
+        },
+        {
+          "label": "Docker containerization",
+          "category": "technical"
+        },
+        {
+          "label": "A/B testing",
+          "category": "marketing"
+        }
+      ],
+      "created_at": "2025-11-01T10:00:00Z"
+    },
+    {
+      "id": "u002",
+      "name": "Yassine Bekri",
+      "email": "yassine@techco.com",
+      "company": "TechCo",
+      "role": "founder",
+      "skills": [
+        {
+          "label": "Successfully scaled ML models to handle 1000+ requests/sec",
+          "category": "technical"
+        },
+        {
+          "label": "Built CI/CD pipeline for ML model deployment",
+          "category": "technical"
+        }
+      ],
+      "created_at": "2025-11-02T10:00:00Z"
+    },
+    {
+      "id": "u003",
+      "name": "Tolga Gunes",
+      "email": "tolga@fintech.com",
+      "company": "FinTech Solutions",
+      "role": "founder",
+      "skills": [
+        {
+          "label": "Completed Series A fundraising round - $5M raised",
+          "category": "fundraising"
+        },
+        {
+          "label": "Product development and feature launch",
+          "category": "product"
+        },
+        {
+          "label": "User research and customer feedback",
+          "category": "UX"
+        }
+      ],
+      "created_at": "2025-11-03T10:00:00Z"
+    },
+    {
+      "id": "ufe5debf7",
+      "name": "Armin",
+      "email": "armintabrizi16@gmail.com",
+      "company": "Armin",
+      "role": "founder",
+      "skills": [],
+      "created_at": "2025-11-15T12:27:21.008717Z"
+    }
+  ],
+  "needs": [
+    {
+      "id": "n001",
+      "user_id": "u001",
+      "label": "Help with ML model deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-10T10:00:00Z"
+    },
+    {
+      "id": "n002",
+      "user_id": "u001",
+      "label": "MLOps best practices and infrastructure setup",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-10T10:00:00Z"
+    },
+    {
+      "id": "n98d41335",
+      "user_id": "u001",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T11:40:36.237077Z"
+    },
+    {
+      "id": "nff121e82",
+      "user_id": "u001",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:12:24.207849Z"
+    },
+    {
+      "id": "nd5640f4d",
+      "user_id": "u001",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:14:22.978329Z"
+    },
+    {
+      "id": "n675d9f06",
+      "user_id": "u001",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:30:31.163509Z"
+    },
+    {
+      "id": "nd43e5904",
+      "user_id": "u003",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:36:47.095958Z"
+    },
+    {
+      "id": "ncb934f4f",
+      "user_id": "u003",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:40:38.825641Z"
+    },
+    {
+      "id": "n0c3f85bd",
+      "user_id": "u003",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:41:08.376988Z"
+    },
+    {
+      "id": "n1c82033c",
+      "user_id": "u002",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T12:57:39.422089Z"
+    },
+    {
+      "id": "nbd95b10e",
+      "user_id": "ufe5debf7",
+      "label": "Machine learning deployment and scaling",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-15T13:38:11.962955Z"
+    }
+  ],
+  "learnings": [
+    {
+      "id": "l001",
+      "user_id": "u002",
+      "label": "Successfully scaled ML models to handle 1000+ requests/sec",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-09T10:00:00Z"
+    },
+    {
+      "id": "l002",
+      "user_id": "u002",
+      "label": "Built CI/CD pipeline for ML model deployment",
+      "category": "technical",
+      "status": "active",
+      "created_at": "2025-11-09T10:00:00Z"
+    },
+    {
+      "id": "l003",
+      "user_id": "u003",
+      "label": "Completed Series A fundraising round - $5M raised",
+      "category": "fundraising",
+      "status": "active",
+      "created_at": "2025-11-08T10:00:00Z"
+    },
+    {
+      "id": "l80613920",
+      "user_id": "u001",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T11:40:36.238033Z"
+    },
+    {
+      "id": "l22dfdb25",
+      "user_id": "u001",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:12:24.208442Z"
+    },
+    {
+      "id": "l311c5bb3",
+      "user_id": "u001",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:14:22.981104Z"
+    },
+    {
+      "id": "l4ac1fa13",
+      "user_id": "u001",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:30:31.165834Z"
+    },
+    {
+      "id": "lc6cd5439",
+      "user_id": "u003",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:36:47.097468Z"
+    },
+    {
+      "id": "l654e4939",
+      "user_id": "u003",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:40:38.828698Z"
+    },
+    {
+      "id": "l945837e0",
+      "user_id": "u003",
+      "label": "Product development and feature launch",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:41:08.379663Z"
+    },
+    {
+      "id": "l320546f9",
+      "user_id": "u003",
+      "label": "User research and customer feedback",
+      "category": "UX",
+      "status": "active",
+      "created_at": "2025-11-15T12:41:08.381134Z"
+    },
+    {
+      "id": "lfeebf989",
+      "user_id": "u002",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T12:57:39.424940Z"
+    },
+    {
+      "id": "l948bd35f",
+      "user_id": "ufe5debf7",
+      "label": "Weekly progress and insights",
+      "category": "product",
+      "status": "active",
+      "created_at": "2025-11-15T13:38:11.964020Z"
+    }
+  ],
+  "match_suggestions": [
+    {
+      "id": "m001",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.92,
+      "reason": "Yassine has experience scaling ML models to handle 1000+ requests/sec, directly addressing your deployment challenges",
+      "status": "declined",
+      "created_at": "2025-11-10T11:00:00Z"
+    },
+    {
+      "id": "mcead6bd9",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "accepted",
+      "created_at": "2025-11-15T11:40:40.680943Z"
+    },
+    {
+      "id": "ma39eee18",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T11:40:40.681438Z"
+    },
+    {
+      "id": "m2283b450",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u003",
+      "score": 0.239,
+      "reason": "The expert's experience with 'Completed Series A fundraising round - $5M raised' can help with your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T11:40:40.681694Z"
+    },
+    {
+      "id": "mc5b58fd3",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T11:40:40.681932Z"
+    },
+    {
+      "id": "m5ddd121f",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T11:40:40.682167Z"
+    },
+    {
+      "id": "mb8f6eb39",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:12:24.642470Z"
+    },
+    {
+      "id": "m98ae59c7",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:12:24.643032Z"
+    },
+    {
+      "id": "ma27549b7",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u003",
+      "score": 0.239,
+      "reason": "The expert's experience with 'Completed Series A fundraising round - $5M raised' can help with your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:12:24.643608Z"
+    },
+    {
+      "id": "m6060b449",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:12:24.643901Z"
+    },
+    {
+      "id": "md9530687",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:12:24.644198Z"
+    },
+    {
+      "id": "m99fc5e70",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:14:23.211280Z"
+    },
+    {
+      "id": "m42b6bcc5",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:14:23.211927Z"
+    },
+    {
+      "id": "m066cc116",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u003",
+      "score": 0.239,
+      "reason": "The expert's experience with 'Completed Series A fundraising round - $5M raised' can help with your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:14:23.212633Z"
+    },
+    {
+      "id": "m14f6b2c4",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:14:23.213003Z"
+    },
+    {
+      "id": "m13bd02e6",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:14:23.213358Z"
+    },
+    {
+      "id": "m081c1267",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:30:31.898256Z"
+    },
+    {
+      "id": "mcfd8ebd5",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:30:31.898993Z"
+    },
+    {
+      "id": "m3f49ac56",
+      "need_id": "n001",
+      "need_user_id": "u001",
+      "expert_user_id": "u003",
+      "score": 0.239,
+      "reason": "The expert's experience with 'Completed Series A fundraising round - $5M raised' can help with your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:30:31.899746Z"
+    },
+    {
+      "id": "m88cf5063",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:30:31.900206Z"
+    },
+    {
+      "id": "m53b0eed1",
+      "need_id": "n002",
+      "need_user_id": "u001",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:30:31.900724Z"
+    },
+    {
+      "id": "m761091ee",
+      "need_id": "n001",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:36:48.237090Z"
+    },
+    {
+      "id": "mddd1ff48",
+      "need_id": "n001",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:36:48.237753Z"
+    },
+    {
+      "id": "m9c3a7d00",
+      "need_id": "n002",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:36:48.238500Z"
+    },
+    {
+      "id": "mc3ee2d3a",
+      "need_id": "n002",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:36:48.238960Z"
+    },
+    {
+      "id": "m3b7d9c02",
+      "need_id": "n001",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:40:39.678209Z"
+    },
+    {
+      "id": "m677a73a3",
+      "need_id": "n001",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:40:39.679791Z"
+    },
+    {
+      "id": "m2c9044d7",
+      "need_id": "n002",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:40:39.680565Z"
+    },
+    {
+      "id": "m400fcc27",
+      "need_id": "n002",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:40:39.681137Z"
+    },
+    {
+      "id": "mab55afc8",
+      "need_id": "n001",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:41:08.955679Z"
+    },
+    {
+      "id": "m18c85420",
+      "need_id": "n001",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:41:08.956446Z"
+    },
+    {
+      "id": "m85b42a25",
+      "need_id": "n002",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:41:08.957317Z"
+    },
+    {
+      "id": "me815d307",
+      "need_id": "n002",
+      "need_user_id": "u003",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:41:08.958140Z"
+    },
+    {
+      "id": "m50b4e989",
+      "need_id": "n001",
+      "need_user_id": "u002",
+      "expert_user_id": "u003",
+      "score": 0.253,
+      "reason": "The expert's experience with 'Product development and feature launch' can help with your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T12:57:40.566113Z"
+    },
+    {
+      "id": "m03e6ac9f",
+      "need_id": "n001",
+      "need_user_id": "ufe5debf7",
+      "expert_user_id": "u002",
+      "score": 0.749,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T13:38:13.261899Z"
+    },
+    {
+      "id": "me7acc2d2",
+      "need_id": "n001",
+      "need_user_id": "ufe5debf7",
+      "expert_user_id": "u002",
+      "score": 0.708,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'Help with ML model deployment and scaling'",
+      "status": "pending",
+      "created_at": "2025-11-15T13:38:13.262718Z"
+    },
+    {
+      "id": "mac1f32c6",
+      "need_id": "n001",
+      "need_user_id": "ufe5debf7",
+      "expert_user_id": "u003",
+      "score": 0.253,
+      "reason": "The expert's experience with 'Product development and feature launch' can help with your need for 'Help with ML model deployment and scaling'",
+      "status": "accepted",
+      "created_at": "2025-11-15T13:38:13.263611Z"
+    },
+    {
+      "id": "m6258f495",
+      "need_id": "n002",
+      "need_user_id": "ufe5debf7",
+      "expert_user_id": "u002",
+      "score": 0.618,
+      "reason": "Both focus on technical. The expert's experience with 'Built CI/CD pipeline for ML model deployment' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T13:38:13.264256Z"
+    },
+    {
+      "id": "mf94f1413",
+      "need_id": "n002",
+      "need_user_id": "ufe5debf7",
+      "expert_user_id": "u002",
+      "score": 0.541,
+      "reason": "Both focus on technical. The expert's experience with 'Successfully scaled ML models to handle 1000+ requests/sec' directly addresses your need for 'MLOps best practices and infrastructure setup'",
+      "status": "pending",
+      "created_at": "2025-11-15T13:38:13.265303Z"
+    }
+  ],
+  "coffee_chats": [
+    {
+      "id": "c001",
+      "match_id": "m001",
+      "requester_id": "u001",
+      "expert_id": "u002",
+      "status": "confirmed",
+      "scheduled_time": "2025-11-15T14:00:00Z",
+      "duration_minutes": 30,
+      "meeting_link": "https://meet.google.com/abc-defg-hij",
+      "created_at": "2025-11-10T12:00:00Z",
+      "updated_at": "2025-11-10T13:00:00Z"
+    },
+    {
+      "id": "c5cd7b247",
+      "match_id": "mcead6bd9",
+      "requester_id": "u001",
+      "expert_id": "u002",
+      "status": "pending_slots",
+      "scheduled_time": null,
+      "duration_minutes": 30,
+      "meeting_link": null,
+      "created_at": "2025-11-15T13:17:19.828198Z",
+      "updated_at": "2025-11-15T13:17:19.828202Z"
+    },
+    {
+      "id": "c38e4f2f9",
+      "match_id": "mac1f32c6",
+      "requester_id": "ufe5debf7",
+      "expert_id": "u003",
+      "status": "confirmed",
+      "scheduled_time": "2025-11-22T13:00:00.000Z",
+      "duration_minutes": 30,
+      "meeting_link": "https://meet.jit.si/FounderChat-c38e4f2f9",
+      "created_at": "2025-11-15T13:38:43.319767Z",
+      "updated_at": "2025-11-15T13:39:13.154817Z"
+    }
+  ],
+  "proposed_slots": [
+    {
+      "id": "ps001",
+      "coffee_chat_id": "c001",
+      "proposed_by": "u002",
+      "slot_time": "2025-11-15T14:00:00Z",
+      "status": "accepted",
+      "created_at": "2025-11-10T12:30:00Z"
+    },
+    {
+      "id": "ps002",
+      "coffee_chat_id": "c001",
+      "proposed_by": "u002",
+      "slot_time": "2025-11-15T16:00:00Z",
+      "status": "declined",
+      "created_at": "2025-11-10T12:30:00Z"
+    },
+    {
+      "id": "ps24865090",
+      "coffee_chat_id": "c38e4f2f9",
+      "proposed_by": "u003",
+      "slot_time": "2025-11-22T13:00:00.000Z",
+      "status": "accepted",
+      "created_at": "2025-11-15T13:38:50.825543Z"
+    },
+    {
+      "id": "ps82139324",
+      "coffee_chat_id": "c38e4f2f9",
+      "proposed_by": "u003",
+      "slot_time": "2025-11-22T14:00:00.000Z",
+      "status": "declined",
+      "created_at": "2025-11-15T13:38:50.827614Z"
+    },
+    {
+      "id": "ps66fbee8f",
+      "coffee_chat_id": "c38e4f2f9",
+      "proposed_by": "u003",
+      "slot_time": "2025-11-22T15:00:00.000Z",
+      "status": "declined",
+      "created_at": "2025-11-15T13:38:50.829348Z"
+    }
+  ]
+}

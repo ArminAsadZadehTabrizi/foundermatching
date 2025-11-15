@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Founder Matching Platform</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 2rem;
+        }
+        
+        .login-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .login-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .login-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .login-subtitle {
+            color: #6b7280;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+        
+        .form-hint {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .login-button {
+            width: 100%;
+            padding: 0.875rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .login-button:active {
+            transform: translateY(0);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .divider span {
+            padding: 0 1rem;
+        }
+        
+        .demo-note {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f0f9ff;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: #0369a1;
+        }
+        
+        .demo-note strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0c4a6e;
+        }
+        
+        .demo-users {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .demo-user {
+            background: white;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .demo-user:hover {
+            background: #e0f2fe;
+        }
+        
+        .demo-user strong {
+            display: inline;
+            color: #0c4a6e;
+        }
+        
+        .admin-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.875rem;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+        
+        .admin-link:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-icon">🚀</div>
+                <h1 class="login-title">Welcome to Founder Matching</h1>
+                <p class="login-subtitle">Connect with fellow founders, share learnings, and get help when you need it</p>
+            </div>
+            
+            {% if error %}
+            <div class="error-message">
+                {{ error }}
+            </div>
+            {% endif %}
+            
+            <form method="POST" action="/login" id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="form-input"
+                        placeholder="you@example.com"
+                        required
+                        autofocus
+                    >
+                    <div class="form-hint">We'll use this to identify your account</div>
+                </div>
+                
+                <div class="divider">
+                    <span>New user? Fill in details below</span>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="form-input"
+                        placeholder="Your name"
+                    >
+                    <div class="form-hint">Required for new accounts</div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="company">Company/Startup (Optional)</label>
+                    <input 
+                        type="text" 
+                        id="company" 
+                        name="company" 
+                        class="form-input"
+                        placeholder="Your company name"
+                    >
+                </div>
+                
+                <button type="submit" class="login-button">
+                    🔓 Login or Sign Up
+                </button>
+            </form>
+            
+            <div class="demo-note">
+                <strong>🎬 Demo Mode - Quick Login:</strong>
+                <div class="demo-users">
+                    <div class="demo-user" onclick="quickLogin('nik@startup.com')">
+                        <strong>Nik Kuchler</strong> - nik@startup.com (AI Startup)
+                    </div>
+                    <div class="demo-user" onclick="quickLogin('yassine@techco.com')">
+                        <strong>Yassine Bekri</strong> - yassine@techco.com (TechCo)
+                    </div>
+                    <div class="demo-user" onclick="quickLogin('tolga@fintech.com')">
+                        <strong>Tolga Gunes</strong> - tolga@fintech.com (FinTech Solutions)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/admin/login" class="admin-link">🔐 Admin Login →</a>
+    </div>
+    
+    <script>
+        function quickLogin(email) {
+            document.getElementById('email').value = email;
+            document.getElementById('loginForm').submit();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

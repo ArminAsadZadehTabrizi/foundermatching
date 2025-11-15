@@ -1,0 +1,58 @@
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore
+
+.gcloudignore
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Local development
+.env
+.venv
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Documentation (optional - keep if you want)
+# README.md
+# *.md
+
+# Testing
+test_*.py
+demo.py
+demo_no_api.py
+welcome.py
+
+# MCP server (not needed for web)
+mcp_server.py
+mcp_config.json
+
+# Setup scripts
+setup.sh
+run_web.sh
+
+
+
+
+
+
+
+
+
+

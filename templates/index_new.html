@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder Matching Platform - AI-Powered Peer Learning</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        /* Additional styles for new features */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .tab {
+            padding: 1rem 1.5rem;
+            background: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #6b7280;
+            transition: all 0.2s;
+        }
+        
+        .tab.active {
+            color: #6366f1;
+            border-bottom-color: #6366f1;
+        }
+        
+        .tab:hover {
+            color: #4f46e5;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .match-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .match-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .match-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        
+        .match-score {
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .match-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .btn-accept {
+            background: #10b981;
+            color: white;
+        }
+        
+        .btn-decline {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .coffee-chat-card {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .status-confirmed {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .time-slots {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .time-slot {
+            padding: 1rem;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .time-slot:hover {
+            border-color: #6366f1;
+            background: #f0f9ff;
+        }
+        
+        .time-slot.selected {
+            border-color: #6366f1;
+            background: #eff6ff;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #6b7280;
+        }
+        
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <h1>Founder Community</h1>
+            </div>
+            <p class="tagline">AI-Powered Peer Learning & Skill Matching</p>
+            <div class="user-info">
+                <span id="userName">Nik Kuchler</span>
+                <span class="user-company">AI Startup</span>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab active" data-tab="submit">📝 Submit Check-in</button>
+            <button class="tab" data-tab="matches">💡 My Matches</button>
+            <button class="tab" data-tab="help-requests">👥 Help Requests</button>
+            <button class="tab" data-tab="coffee-chats">☕ Coffee Chats</button>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- TAB 1: Submit Check-in -->
+            <div class="tab-content active" id="submit-tab">
+                <section class="card input-card">
+                    <h2>📝 Weekly Check-in</h2>
+                    <p class="subtitle">Share what you're working on, what you're stuck on, and what you've learned</p>
+                    
+                    <form id="checkinForm">
+                        <div class="form-group">
+                            <label for="transcript">Your Check-in:</label>
+                            <textarea 
+                                id="transcript" 
+                                name="transcript" 
+                                rows="10" 
+                                placeholder="Example: This week I've been working on deploying our ML model to production. I'm stuck on scaling issues - the response time is terrible when multiple users hit it. I think I need help with MLOps and containerization. On the bright side, I figured out how to optimize our data pipeline and reduced processing time by 40%..."
+                                required
+                            ></textarea>
+                            <div class="char-count">
+                                <span id="charCount">0</span> characters
+                            </div>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="btn-text">🤖 Analyze & Find Matches</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="exampleBtn">
+                                Try Example
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Results after submission -->
+                    <div id="submissionResults" style="display: none; margin-top: 2rem;">
+                        <h3 style="color: #10b981;">✅ Check-in Submitted!</h3>
+                        <div id="extractedInfo"></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TAB 2: My Matches (Needs I have) -->
+            <div class="tab-content" id="matches-tab">
+                <section class="card">
+                    <h2>💡 Founders Who Can Help You</h2>
+                    <p class="subtitle">Based on your needs, here are experts who can help</p>
+                    
+                    <div id="myMatchesList">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">🔍</div>
+                            <p>No matches yet. Submit a check-in to find expert founders!</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TAB 3: Help Requests (People who need my help) -->
+            <div class="tab-content" id="help-requests-tab">
+                <section class="card">
+                    <h2>👥 Founders Seeking Your Help</h2>
+                    <p class="subtitle">You can help these founders with your expertise</p>
+                    
+                    <div id="helpRequestsList">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">💪</div>
+                            <p>No help requests yet. Share your learnings to help others!</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- TAB 4: Coffee Chats -->
+            <div class="tab-content" id="coffee-chats-tab">
+                <section class="card">
+                    <h2>☕ Scheduled Coffee Chats</h2>
+                    <p class="subtitle">Your upcoming and past mentoring sessions</p>
+                    
+                    <div id="coffeeChatsList">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">☕</div>
+                            <p>No coffee chats scheduled yet</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with ❤️ for the startup community | Powered by AI & MCP</p>
+            <p class="demo-badge">
+                <a href="/admin" style="color: inherit; text-decoration: none;">🎛️ Admin Dashboard</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    
+    <!-- Time Slot Proposal Modal -->
+    <div id="proposeSlotModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Propose Time Slots</h3>
+            <p>Propose 3 time slots for your coffee chat</p>
+            
+            <div class="form-group">
+                <label>Slot 1:</label>
+                <input type="datetime-local" id="slot1" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Slot 2:</label>
+                <input type="datetime-local" id="slot2" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Slot 3:</label>
+                <input type="datetime-local" id="slot3" class="form-control">
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" id="submitSlotsBtn">Propose Slots</button>
+                <button class="btn btn-secondary" id="cancelSlotsBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app_new.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

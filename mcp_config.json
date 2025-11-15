@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "founder-matching": {
+      "command": "python",
+      "args": ["/Users/Armin/hackathon/mcp_server.py"],
+      "env": {},
+      "description": "Founder matching and search tools"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

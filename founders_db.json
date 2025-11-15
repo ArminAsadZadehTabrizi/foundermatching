@@ -1,0 +1,136 @@
+{
+  "founders": [
+    {
+      "id": "f001",
+      "name": "Sarah Chen",
+      "company": "DataFlow AI",
+      "expertise": ["machine learning", "data pipelines", "MLOps", "Python", "TensorFlow"],
+      "stage": "Series A",
+      "industry": "AI/ML Infrastructure",
+      "bio": "Built scalable ML infrastructure at Google. Expert in production ML systems and data engineering.",
+      "helpfulIn": ["ml deployment", "data architecture", "scaling ML systems", "model optimization"]
+    },
+    {
+      "id": "f002",
+      "name": "Marcus Johnson",
+      "company": "FinTech Solutions",
+      "expertise": ["fintech", "payment systems", "compliance", "security", "blockchain"],
+      "stage": "Series B",
+      "industry": "Financial Technology",
+      "bio": "Former VP at Stripe. Deep expertise in payment processing, fraud detection, and financial regulations.",
+      "helpfulIn": ["payment integration", "financial compliance", "fraud prevention", "banking APIs"]
+    },
+    {
+      "id": "f003",
+      "name": "Elena Rodriguez",
+      "company": "HealthConnect",
+      "expertise": ["healthtech", "HIPAA compliance", "telemedicine", "patient data", "React", "Node.js"],
+      "stage": "Seed",
+      "industry": "Healthcare Technology",
+      "bio": "Building HIPAA-compliant telehealth platform. Expert in healthcare regulations and medical data security.",
+      "helpfulIn": ["healthcare regulations", "patient privacy", "medical integrations", "telehealth features"]
+    },
+    {
+      "id": "f004",
+      "name": "Alex Kim",
+      "company": "DevTools Inc",
+      "expertise": ["developer tools", "CI/CD", "Kubernetes", "DevOps", "cloud architecture"],
+      "stage": "Series A",
+      "industry": "Developer Tools",
+      "bio": "Built CI/CD platform used by 10k+ companies. Expert in cloud infrastructure and developer experience.",
+      "helpfulIn": ["deployment automation", "container orchestration", "cloud infrastructure", "dev workflows"]
+    },
+    {
+      "id": "f005",
+      "name": "Priya Patel",
+      "company": "GrowthMetrics",
+      "expertise": ["growth hacking", "marketing analytics", "SEO", "conversion optimization", "A/B testing"],
+      "stage": "Bootstrapped",
+      "industry": "Marketing Technology",
+      "bio": "Scaled 3 startups from 0 to $1M ARR. Expert in product-led growth and data-driven marketing.",
+      "helpfulIn": ["user acquisition", "growth strategies", "marketing automation", "conversion funnels"]
+    },
+    {
+      "id": "f006",
+      "name": "Jordan Lee",
+      "company": "MobileFirst",
+      "expertise": ["mobile development", "React Native", "iOS", "Android", "app store optimization"],
+      "stage": "Seed",
+      "industry": "Mobile Apps",
+      "bio": "Built mobile apps with 5M+ downloads. Expert in mobile UX and app monetization strategies.",
+      "helpfulIn": ["mobile app development", "cross-platform frameworks", "app performance", "mobile UX"]
+    },
+    {
+      "id": "f007",
+      "name": "David Thompson",
+      "company": "SaaS Builder",
+      "expertise": ["SaaS architecture", "subscription billing", "customer success", "product management"],
+      "stage": "Series B",
+      "industry": "B2B SaaS",
+      "bio": "Built and sold 2 SaaS companies. Expert in SaaS metrics, pricing strategies, and customer retention.",
+      "helpfulIn": ["SaaS business model", "pricing strategies", "customer retention", "product roadmap"]
+    },
+    {
+      "id": "f008",
+      "name": "Nina Ivanova",
+      "company": "SecureStack",
+      "expertise": ["cybersecurity", "penetration testing", "OAuth", "encryption", "security audits"],
+      "stage": "Series A",
+      "industry": "Security",
+      "bio": "Former security lead at Microsoft. Expert in application security and compliance frameworks.",
+      "helpfulIn": ["security architecture", "vulnerability assessment", "authentication systems", "data encryption"]
+    },
+    {
+      "id": "f009",
+      "name": "Carlos Martinez",
+      "company": "EdgeCompute",
+      "expertise": ["distributed systems", "microservices", "Go", "real-time data", "WebSockets"],
+      "stage": "Seed",
+      "industry": "Infrastructure",
+      "bio": "Built real-time systems at Uber. Expert in distributed architecture and high-performance systems.",
+      "helpfulIn": ["system design", "real-time features", "scalability", "distributed architecture"]
+    },
+    {
+      "id": "f010",
+      "name": "Lisa Wang",
+      "company": "VoiceAI",
+      "expertise": ["NLP", "speech recognition", "chatbots", "conversational AI", "LLMs"],
+      "stage": "Series A",
+      "industry": "AI/Voice Technology",
+      "bio": "PhD in NLP from Stanford. Expert in building conversational AI and voice interfaces.",
+      "helpfulIn": ["natural language processing", "voice interfaces", "chatbot development", "LLM integration"]
+    },
+    {
+      "id": "f011",
+      "name": "Ryan O'Brien",
+      "company": "FundRaiser Pro",
+      "expertise": ["fundraising", "pitch decks", "investor relations", "venture capital", "startup metrics"],
+      "stage": "Series B",
+      "industry": "Startup Services",
+      "bio": "Raised $50M+ across multiple startups. Expert in fundraising strategy and investor storytelling.",
+      "helpfulIn": ["fundraising strategy", "pitch preparation", "investor networking", "cap table management"]
+    },
+    {
+      "id": "f012",
+      "name": "Aisha Mohammed",
+      "company": "DesignLab",
+      "expertise": ["UI/UX design", "design systems", "Figma", "user research", "accessibility"],
+      "stage": "Bootstrapped",
+      "industry": "Design Tools",
+      "bio": "Former design lead at Airbnb. Expert in creating beautiful, accessible user experiences.",
+      "helpfulIn": ["product design", "user experience", "design systems", "prototyping"]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
